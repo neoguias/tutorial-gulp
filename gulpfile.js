@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
@@ -30,7 +30,7 @@ gulp.task('tareas', function() {
     .pipe(cssnano())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/css/'));
-})
+});
 
 gulp.task('default', function() {
   gulp.watch('./src/sass/**/*.scss', gulp.series('tareas'));
